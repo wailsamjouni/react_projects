@@ -1,0 +1,72 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.slide__container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.left__arrow,
+.right__arrow {
+  position: absolute;
+  top: 50%;
+  width: 60px;
+  height: 60px;
+  z-index: 10;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  border-radius: 12px;
+}
+
+.left__arrow {
+  left: -60px;
+}
+
+.right__arrow {
+  right: -60px;
+}
+
+.img__container {
+  width: 1000px;
+  height: 800px;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.active {
+  border-radius: 20px;
+  padding: 10px;
+  background-color: orangered;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+h1,
+span {
+  margin-bottom: 20px;
+  font-size: 30px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+h1 {
+  color: orangered;
+  background-color: black;
+  padding: 10px;
+}
+
+span {
+  color: black;
+  background-color: orangered;
+  margin-left: 15px;
+}
