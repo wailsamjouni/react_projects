@@ -23,7 +23,7 @@ function Slider({array}) {
       {data.map((image,index) => {
         return(
             <div className={currentindex === index ? "active" : ""}>
-              {currentindex === index && <img className='img__container' key={index} src={image.image} />} 
+              {currentindex === index && <img className='img__container' key={index} src={image.image} />}
             </div>
         )
       }

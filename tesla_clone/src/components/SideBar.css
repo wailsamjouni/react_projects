@@ -1,0 +1,65 @@
+.container {
+  font-family: "Poppins", sans-serif;
+  position: fixed;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  padding: 80px 25px;
+  width: 320px;
+  transition: 0.7s;
+  z-index: 6;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.container .list {
+  display: flex;
+  flex-direction: column;
+}
+
+.container .list a {
+  margin: 5px 0;
+  transition: 0.7s;
+  text-transform: capitalize;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.container .row {
+  display: flex;
+  justify-content: flex-start;
+  align-items: start;
+  padding: 7px 20px;
+  border-radius: 13px;
+  /* transition: 0.7s; */
+}
+
+.row:hover {
+  background-color: #ebecf0;
+}
+
+.container .row .language {
+  display: flex;
+  flex-direction: column;
+  margin-left: 7px;
+  cursor: pointer;
+}
+
+.container .row .language a {
+  font-size: 12px;
+}
+
+.container .row .language a:hover {
+  text-decoration: underline;
+}
+
+/* .container::-webkit-scrollbar {
+  display: none;
+}
+
+.container {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+} */
