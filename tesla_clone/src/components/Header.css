@@ -4,11 +4,12 @@ a {
   font-weight: 600;
   padding: 7px 20px;
   color: black;
-  /* transition: 0.7s; */
+  transition-property: visibility, background;
+  transition-duration: 0s, 1s;
   border-radius: 13px;
 }
 
-a:hover {
+.header .header__middle a:hover {
   background-color: #ebecf0;
 }
 

@@ -11,7 +11,8 @@ function Header(props) {
   <div className='header'>
       <div className="header__logo">
           <a href="/">
-          <img src="https://www.logo.wine/a/logo/Tesla%2C_Inc./Tesla%2C_Inc.-Wordmark-Black-Logo.wine.svg" alt="" />
+          {/* <img src="https://www.logo.wine/a/logo/Tesla%2C_Inc./Tesla%2C_Inc.-Wordmark-Black-Logo.wine.svg" alt="" /> */}
+          <img src="https://assets.website-files.com/5e8fceb1c9af5c3915ec97a0/5ec2f037975ed372da9f6286_Tesla-Logo-PNG-HD.png" alt="" />
           </a>
       </div>
       <div className="header__middle">
