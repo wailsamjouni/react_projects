@@ -1,5 +1,5 @@
 import NavBar from '../components/NavBar'
-import styles from '../styles/Home.module.css';
+import styles from '../styles/Home.module.scss';
 import Hero from '../components/Hero';
 import ScrollToTop from '../components/ScrollToTop';
 import Contact from '../components/Contact';

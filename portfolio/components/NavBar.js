@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '../styles/NavBar.module.css';
+import styles from '../styles/NavBar.module.scss';
 import Link from 'next/link';
 import Image from 'next/image';
 import {FaCode} from 'react-icons/fa';
@@ -23,30 +23,30 @@ function NavBar({isOpen, setIsOpen}) {
               </Link>
           </div>
           <div className={styles.container__navbar}>
-              <ul className={styles.container__list}>
+              <ul>
                   <li className={currentPath === '/' ? styles.active : styles.inactive}>
                     <Link href="/">
-                    <a className={styles.container__link}>Home</a>
+                    <a>Home</a>
                     </Link>
                   </li>
                   <li className={currentPath === '/about' ? styles.active : styles.inactive}>
                     <Link href='/about'>
-                    <a className={styles.container__link}>About</a>
+                    <a>About</a>
                     </Link>
                   </li>
                   <li className={currentPath === '/skills' ? styles.active : styles.inactive}>
                     <Link href='/skills'>
-                    <a className={styles.container__link}>Skills</a>
+                    <a>Skills</a>
                     </Link>
                   </li>
                   <li className={currentPath === '/projects' ? styles.active : styles.inactive}>
                     <Link href='/projects'>
-                    <a className={styles.container__link}>Projects</a>
+                    <a>Projects</a>
                     </Link>
                   </li>
                   <li className={currentPath === '/portfolio' ? styles.active : styles.inactive}>
                     <Link href='/portfolio'>
-                    <a className={styles.container__link}>Portfolio</a>
+                    <a>Portfolio</a>
                     </Link>
                   </li>
               </ul>

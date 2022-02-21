@@ -1,0 +1,89 @@
+@import "./partials/variables";
+@import "./partials/mixins";
+@import "./partials/extend";
+
+.hero {
+  @include flexBox(center);
+  height: calc(100vh - 80px);
+  background-color: $bg-color-primary;
+  &__content {
+    @include border-right;
+    @include flexColumn(center, flex-start);
+    padding: 20px;
+    position: relative;
+    gap: 30px;
+    background-color: $bg-color-secondary;
+    width: 70%;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  }
+  &__wrapper {
+    @include flexColumn(space-around, center);
+    height: 75vh;
+    background-color: $bg-color-primary;
+    padding: 40px;
+  }
+  &__aboutcontainer {
+    @include flexBox(center);
+    @include border-left;
+    position: absolute;
+    top: 50%;
+    left: -120px;
+    background-color: $bg-color-secondary;
+    padding: 10px;
+    width: 120px;
+    h3 {
+      color: $btn-color-primary;
+    }
+  }
+  &__top {
+    @include flexColumn(space-evenly, flex-start);
+    width: 100%;
+    padding: 0 10px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    min-height: 300px;
+    h1 {
+      color: $btn-color-primary;
+      font-size: 50px;
+      letter-spacing: 1px;
+      font-weight: bold;
+      span {
+        color: $btn-color-secondary;
+        margin-left: 10px;
+      }
+    }
+    h3 {
+      color: $btn-color-secondary;
+      font-size: 22px;
+    }
+    p {
+      color: $btn-color-secondary;
+      font-size: 18px;
+      font-weight: normal;
+    }
+  }
+  &__bottom {
+    @include flexBox(center);
+    width: 100%;
+    div:nth-child(1) {
+      @extend %button-style-shared;
+      @include border-left;
+      margin-right: 10px;
+      background-color: $btn-color-primary;
+      h4 {
+        margin-left: 10px;
+        color: $btn-color-secondary;
+      }
+    }
+    div:nth-child(2) {
+      @extend %button-style-shared;
+      @include border-right;
+      margin-left: 10px;
+      background-color: $btn-color-secondary;
+      h4 {
+        margin-left: 10px;
+        color: $btn-color-primary;
+      }
+    }
+  }
+}
