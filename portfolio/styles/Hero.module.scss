@@ -4,7 +4,7 @@
 
 .hero {
   @include flexBox(center);
-  height: calc(100vh - 80px);
+  height: calc(100vh - 160px);
   background-color: $bg-color-primary;
   &__content {
     @include border-right;
@@ -43,10 +43,8 @@
     border-bottom-left-radius: 10px;
     min-height: 300px;
     h1 {
+      @extend %h1-style-shared;
       color: $btn-color-primary;
-      font-size: 50px;
-      letter-spacing: 1px;
-      font-weight: bold;
       span {
         color: $btn-color-secondary;
         margin-left: 10px;

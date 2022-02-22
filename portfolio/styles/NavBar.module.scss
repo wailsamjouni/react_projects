@@ -40,7 +40,7 @@
   }
   &__socialhamburger {
     @include flexBox(space-around);
-    gap: 50px;
+    // gap: 50px;
     .container__social {
       @include flexBox(center);
       gap: 10px;
@@ -73,96 +73,3 @@
 .inactive {
   @include flexBox(center);
 }
-
-// .container {
-//   display: flex;
-//   justify-content: space-around;
-//   align-items: center;
-//   background-color: $bg-color-primary;
-//   height: 80px;
-//   /* background-color: $btn-color-primary; */
-//   font-family: "Roboto", sans-serif;
-//   position: sticky;
-//   top: 0;
-//   z-index: 3;
-// }
-
-// .container__logo {
-//   padding: 5px 20px;
-//   cursor: pointer;
-//   background-color: #fff;
-//   border-radius: 10px;
-// }
-
-// .container__navbar {
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-// }
-
-// .container__list {
-//   display: flex;
-//   justify-content: space-between;
-//   align-items: center;
-//   background-color: $btn-color-primary;
-//   padding: 5px 50px;
-//   border-radius: 10px;
-// }
-
-// .container__link {
-//   padding: 10px 25px;
-//   margin-right: 20px;
-//   background-color: transparent;
-//   color: white;
-//   font-size: 20px;
-//   font-weight: bold;
-//   cursor: pointer;
-//   transition: $transition;
-//   border-radius: 10px;
-// }
-
-// .container__link:hover {
-//   color: #282c34;
-// }
-
-// .container__icons {
-//   cursor: pointer;
-//   /* display: none; */
-//   transition: 1s;
-//   color: $btn-color-primary;
-// }
-
-// .container__icons:hover {
-//   scale: 1.2;
-//   color: white;
-// }
-
-// .active .container__link {
-//   color: #282c34;
-//   /* color: $btn-color-primary; */
-//   /* background-color: #282c34; */
-// }
-
-// .container__socialhamburger {
-//   display: flex;
-//   justify-content: space-around;
-//   align-items: center;
-//   gap: 50px;
-// }
-
-// .container__social {
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   gap: 10px;
-// }
-
-// .container__socialicons {
-//   transition: 1s;
-//   color: $btn-color-primary;
-// }
-
-// .container__socialicons:hover {
-//   scale: 1.2;
-//   color: white;
-// }

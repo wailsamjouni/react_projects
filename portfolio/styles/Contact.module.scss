@@ -1,0 +1,83 @@
+@import "./partials/variables";
+@import "./partials/mixins";
+@import "./partials/extend";
+
+.contact {
+  @include flexBox(center);
+  height: calc(100vh - 160px);
+  background-color: $bg-color-primary;
+  &__wrapper {
+    @include flexBox(space-evenly);
+    height: 75vh;
+    width: 70%;
+    padding: 40px;
+    background-color: $bg-color-primary;
+    .contact__left {
+      @include flexColumn(space-between, center);
+      gap: 30px;
+      .contact__titlecontainer {
+        @include flexBox(center);
+        padding: 20px 40px;
+        color: $btn-color-secondary;
+        background-color: $bg-color-secondary;
+        box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+        border-radius: 10px;
+        h1 {
+          @extend %h1-style-shared;
+          span {
+            color: $btn-color-primary;
+          }
+        }
+      }
+      .contact__messagepolygon {
+        @include message-polygon;
+        background-color: $btn-color-primary;
+        height: 200px;
+        width: 100%;
+        border-radius: 10px;
+        box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+      }
+    }
+    form {
+      @include flexBox(center);
+      width: 60%;
+      background-color: $bg-color-secondary;
+      padding: 20px;
+      border-radius: 20px;
+      .contact__formcontainer {
+        @include flexColumn(center, flex-start);
+        background-color: $bg-color-primary;
+        padding: 20px 40px;
+        border-radius: 10px;
+        box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+        gap: 20px;
+        width: 100%;
+        input {
+          @extend %input-style-shared;
+          height: 60px;
+        }
+        textarea {
+          @extend %input-style-shared;
+          resize: none;
+        }
+      }
+    }
+    .contact__container {
+      @include flexBox(center);
+      width: 100%;
+      cursor: pointer;
+      .contact__sendmessage {
+        @include flexBox(center);
+        width: 50%;
+        background-color: $btn-color-secondary;
+        padding: 10px 20px;
+        border-radius: 10px;
+        color: $btn-color-primary;
+        h3 {
+          margin-left: 10px;
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}

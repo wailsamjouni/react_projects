@@ -6,3 +6,19 @@
   margin-bottom: 10px;
   cursor: pointer;
 }
+
+%input-style-shared {
+  border: none;
+  outline: none;
+  padding: 10px;
+  background-color: $bg-color-secondary;
+  font-size: 18px;
+  width: 95%;
+  color: $btn-color-secondary;
+}
+
+%h1-style-shared {
+  font-size: 50px;
+  letter-spacing: 1px;
+  font-weight: bold;
+}

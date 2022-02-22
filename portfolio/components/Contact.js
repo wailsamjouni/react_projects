@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '../styles/Contact.module.css';
+import styles from '../styles/Contact.module.scss';
 import {FiSend} from 'react-icons/fi';
 
 
@@ -21,19 +21,10 @@ function Contact() {
         </div>
         <form className={styles.contact__right} onSubmit={handleSubmit}>
           <div className={styles.contact__formcontainer}>
-            {/* <div className={styles.contact__infos}> */}
-              {/* <label className={styles.contact__label} htmlFor="Firstname">Firstname :</label> */}
               <input className={styles.contact__input} type="text" placeholder='Enter your Fullname'/>
-            {/* </div> */}
-            {/* <div className={styles.contact__infos}> */}
-              {/* <label className={styles.contact__label} htmlFor="Lastname">Lastname :</label> */}
               <input className={styles.contact__input} type="text" placeholder='Enter your Email'/>
-            {/* </div> */}
-            {/* <div className={styles.contact__infos}> */}
-              {/* <label className={styles.contact__label} htmlFor="Message">Message :</label> */}
               <textarea className={styles.contact__textarea} rows="4" cols="50" name="message" placeholder='Write your Message...'>
               </textarea>
-            {/* </div> */}
             <div className={styles.contact__container}>
               <div className={styles.contact__sendmessage}>
                 <FiSend size={'1.7rem'} color='orange'/>
