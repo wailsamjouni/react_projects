@@ -4,7 +4,7 @@
 
 .hero {
   @include flexBox(center);
-  height: calc(100vh - 160px);
+  height: calc(100vh - 80px);
   background-color: $bg-color-primary;
   &__content {
     @include border-right;

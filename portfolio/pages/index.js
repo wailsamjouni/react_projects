@@ -4,6 +4,7 @@ import Hero from '../components/Hero';
 import ScrollToTop from '../components/ScrollToTop';
 import Contact from '../components/Contact';
 import { useWindowScroll } from 'react-use';
+import NavResponsive from '../components/nav/NavResponsive';
 
 export default function Home() {
 

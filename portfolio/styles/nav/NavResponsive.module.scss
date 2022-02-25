@@ -1,0 +1,40 @@
+@import "../partials/mixins";
+@import "../partials/extend";
+@import "../partials/media";
+@import "../partials/variables";
+
+.menu {
+  @include flexBox(center);
+  position: fixed;
+  top: 80px;
+  background-color: $bg-color-secondary;
+  padding: 20px;
+  width: 100vw;
+  height: calc(100vh - 80px);
+  margin: 0;
+  padding: 0;
+  z-index: 100;
+  color: orange;
+  ul {
+    @include flexColumn(space-between, center);
+    gap: 35px;
+    font-size: 25px;
+    text-transform: uppercase;
+    font-weight: bold;
+    li {
+      background-color: $bg-color-primary;
+      padding: 10px 20px;
+      border-radius: 10px;
+      transition: all $transition ease;
+      cursor: pointer;
+      &:hover {
+        color: $bg-color-secondary;
+        background-color: $btn-color-primary;
+      }
+    }
+  }
+}
+
+.menu {
+  display: none;
+}
