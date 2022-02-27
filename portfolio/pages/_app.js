@@ -1,11 +1,15 @@
 import Layout from '../components/Layout'
 import '../styles/globals.css'
-
+import {useContext} from 'react'
+import DataContext from '../context/DataContext';
+import {DataProvider} from '../context/DataContext'
 function MyApp({ Component, pageProps }) {
   return (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
+    <DataProvider>
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    </DataProvider>
   );
 }
 

@@ -1,6 +1,7 @@
 @import "./partials/variables";
 @import "./partials/mixins";
 @import "./partials/extend";
+@import "./partials/media";
 
 .contact {
   @include flexBox(center);
@@ -37,10 +38,14 @@
         border-radius: 10px;
         box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
       }
+      @include responsive-mode(mobil) {
+        display: none;
+      }
     }
     form {
       @include flexBox(center);
-      width: 60%;
+      position: relative;
+      width: 100%;
       background-color: $bg-color-secondary;
       padding: 20px;
       border-radius: 20px;
@@ -61,6 +66,21 @@
           resize: none;
         }
       }
+      &::before {
+        content: "";
+        @include message-polygon;
+        position: absolute;
+        top: -60px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 50px;
+        height: 50px;
+        background-color: $btn-color-primary;
+        display: none;
+        @include responsive-mode(mobil) {
+          display: inline;
+        }
+      }
     }
     .contact__container {
       @include flexBox(center);
@@ -69,13 +89,19 @@
       .contact__sendmessage {
         @include flexBox(center);
         width: 50%;
-        background-color: $btn-color-secondary;
+        background-color: $bg-color-secondary;
         padding: 10px 20px;
         border-radius: 10px;
         color: $btn-color-primary;
         h3 {
           margin-left: 10px;
           font-size: 20px;
+          @include responsive-mode(mobil) {
+            font-size: 14px;
+          }
+        }
+        @include responsive-mode(mobil) {
+          // background-color: $bg-color-secondary;
         }
       }
     }

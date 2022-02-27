@@ -3,7 +3,8 @@ import styles from '../styles/Hero.module.scss';
 import {BsFillArrowRightSquareFill} from 'react-icons/bs';
 import {IoDocumentText} from 'react-icons/io5';
 import Link from 'next/link';
-// import resume from '../img/CV-up.pdf';
+import r from '../img/arrow.svg'
+import Image from 'next/image'
 
 function Hero() {
   return (
@@ -29,26 +30,18 @@ function Hero() {
           <div className={styles.hero__bottom}>
             <Link href='/portfolio'>
               <div className={styles.hero__viewportfolio}>
-                <BsFillArrowRightSquareFill size={'1.7rem'} color='white'/>
-                <h4 className={styles.hero__portfoliotext}>View Portfolio</h4>
+                <BsFillArrowRightSquareFill size={'1.7rem'} color='orange'/>
+                <h4 className={styles.hero__portfoliotext}>Portfolio</h4>
               </div>
             </Link>
             <Link href='/resume'>
               <div className={styles.hero__viewresume}>
                 <IoDocumentText size={'1.7rem'} color='orange'/>
-                <h4 className={styles.hero__resumetext}>View Resume</h4>
+                <h4 className={styles.hero__resumetext}>Resume</h4>
               </div>
             </Link>
           </div>
         </div>
-        {/* <div className={styles.hero__informations}>
-          <h3 className={styles.hero__unique}>
-          For more informations check out my 
-            <Link href='/skills'><a><span className={styles.hero__span}>Skills</span></a></Link>, 
-            <Link href='/projects'><a><span className={styles.hero__span}>Projects</span></a></Link> 
-            and <Link href='/portfolio'><a><span className={styles.hero__span}>Portfolio</span></a></Link>        
-          </h3>
-        </div> */}
       </div>
     </div>
   );

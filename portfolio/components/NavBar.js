@@ -6,10 +6,14 @@ import {FiMenu} from 'react-icons/fi';
 import {AiOutlineClose} from 'react-icons/ai';
 import {useRouter} from 'next/router';
 import {AiFillGithub, AiFillLinkedin} from 'react-icons/ai';
+import { useContext } from 'react';
+import DataContext from '../context/DataContext';
 
-function NavBar({isOpen, setIsOpen}) {
+function NavBar() {
+    const value = useContext(DataContext);
     const router = useRouter();
     const currentPath = router.pathname;
+    const {isOpen, setIsOpen} = value;
 
   return (
       <div className={styles.wrapper}>
@@ -17,7 +21,7 @@ function NavBar({isOpen, setIsOpen}) {
           <div className={styles.container__logo}>
               <Link href="/">
                   <a>
-                  <FaCode size={'2.5rem'} color='orange'/>
+                  <FaCode size={'2.5rem'} className={styles.logo}/>
                   </a>
               </Link>
           </div>

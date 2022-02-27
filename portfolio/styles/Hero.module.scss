@@ -1,6 +1,7 @@
 @import "./partials/variables";
 @import "./partials/mixins";
 @import "./partials/extend";
+@import "./partials/media";
 
 .hero {
   @include flexBox(center);
@@ -15,6 +16,9 @@
     background-color: $bg-color-secondary;
     width: 70%;
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    @include responsive-mode(mobil) {
+      border-radius: 0;
+    }
   }
   &__wrapper {
     @include flexColumn(space-around, center);
@@ -34,6 +38,13 @@
     h3 {
       color: $btn-color-primary;
     }
+    @include responsive-mode(mobil) {
+      top: 0%;
+      left: 50%;
+      transform: translate(-50%, -99%);
+      border-radius: 0;
+      border-bottom: 1px solid $btn-color-primary;
+    }
   }
   &__top {
     @include flexColumn(space-evenly, flex-start);
@@ -48,6 +59,12 @@
       span {
         color: $btn-color-secondary;
         margin-left: 10px;
+        @include responsive-mode(mobil) {
+          margin-left: 5px;
+        }
+      }
+      @include responsive-mode(mobil) {
+        font-size: 35px;
       }
     }
     h3 {
@@ -58,6 +75,9 @@
       color: $btn-color-secondary;
       font-size: 18px;
       font-weight: normal;
+      @include responsive-mode(mobil) {
+        font-size: 14px;
+      }
     }
   }
   &__bottom {
@@ -67,20 +87,28 @@
       @extend %button-style-shared;
       @include border-left;
       margin-right: 10px;
-      background-color: $btn-color-primary;
+      background-color: $bg-color-primary;
       h4 {
         margin-left: 10px;
-        color: $btn-color-secondary;
+        color: $btn-color-primary;
+      }
+      @include responsive-mode(mobil) {
+        border-radius: 0;
+        font-size: 14px;
       }
     }
     div:nth-child(2) {
       @extend %button-style-shared;
       @include border-right;
       margin-left: 10px;
-      background-color: $btn-color-secondary;
+      background-color: $bg-color-primary;
       h4 {
         margin-left: 10px;
         color: $btn-color-primary;
+      }
+      @include responsive-mode(mobil) {
+        border-radius: 0;
+        font-size: 14px;
       }
     }
   }

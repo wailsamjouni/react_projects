@@ -4,12 +4,11 @@ import Hero from '../components/Hero';
 import ScrollToTop from '../components/ScrollToTop';
 import Contact from '../components/Contact';
 import { useWindowScroll } from 'react-use';
-import NavResponsive from '../components/nav/NavResponsive';
+import { DataProvider } from '../context/DataContext';
 
 export default function Home() {
 
   const {y: pageYOffset} = useWindowScroll();
-  console.log(pageYOffset);
   const scrollTop = () => {
     window.scroll({top: 0, behavior: 'smooth'})
   }
