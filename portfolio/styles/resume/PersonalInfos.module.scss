@@ -1,0 +1,22 @@
+@import "../partials/extend";
+@import "../partials/media";
+@import "../partials/mixins";
+@import "../partials/variables";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 10px 30px;
+  // background-color: $bg-color-primary;
+  width: 90%;
+  // border-radius: 10px;
+  // box-shadow: $custom-shadow;
+  border-bottom: 1px solid $btn-color-primary;
+  h1 {
+    color: $btn-color-primary;
+    font-size: 50px;
+  }
+}

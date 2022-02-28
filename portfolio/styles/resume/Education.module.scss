@@ -1,0 +1,35 @@
+@import "../partials/extend";
+@import "../partials/media";
+@import "../partials/mixins";
+@import "../partials/variables";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background-color: $bg-color-primary;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: $custom-shadow;
+  h2 {
+    color: $btn-color-primary;
+    letter-spacing: 1px;
+    font-weight: normal;
+  }
+  h3 {
+    font-size: 17px;
+    font-weight: normal;
+  }
+  h4 {
+    font-size: 15px;
+    font-weight: normal;
+    background-color: $bg-color-secondary;
+    padding: 10px;
+    border-radius: 10px;
+    span {
+      color: $btn-color-primary;
+    }
+  }
+}

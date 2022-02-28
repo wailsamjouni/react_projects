@@ -1,9 +1,14 @@
 import React from 'react'
 import styles from '../../styles/resume/RightSide.module.scss'
+import Educations from './Educations'
+import PersonalInfos from './PersonalInfos'
+import Progress from './Progress'
 
 function RightSide() {
   return (
-    <div>RightSide</div>
+    <div className={styles.right}>
+      <Educations />
+    </div>
   )
 }
 

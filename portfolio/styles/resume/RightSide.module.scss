@@ -1,4 +1,14 @@
 @import "../partials/extend";
 @import "../partials/media";
-@import "../partials/media";
+@import "../partials/mixins";
 @import "../partials/variables";
+
+.right {
+  @include flexColumn(space-between, flex-start);
+  background-color: $bg-color-secondary;
+  flex: 0.9;
+  padding: 20px;
+  box-shadow: $custom-shadow;
+  margin: 20px;
+  border-radius: 10px;
+}

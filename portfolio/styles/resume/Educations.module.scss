@@ -1,0 +1,36 @@
+@import "../partials/extend";
+@import "../partials/media";
+@import "../partials/mixins";
+@import "../partials/variables";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  border-bottom: 1px solid $btn-color-primary;
+  padding: 20px;
+  &__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    // padding: 10px;
+    h1 {
+      font-size: 30px;
+      padding: 10px;
+    }
+    span {
+      height: 30px;
+      width: 4px;
+      background-color: orange;
+    }
+  }
+  &__educations {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+  }
+}
