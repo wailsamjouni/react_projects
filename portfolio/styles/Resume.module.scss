@@ -1,0 +1,10 @@
+@import "./partials/extend";
+@import "./partials/media";
+@import "./partials/mixins";
+@import "./partials/variables";
+
+.container {
+  display: flex;
+  background-color: $bg-color-primary;
+  color: $btn-color-secondary;
+}

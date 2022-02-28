@@ -1,0 +1,64 @@
+@import "../partials/extend";
+@import "../partials/media";
+@import "../partials/mixins";
+@import "../partials/variables";
+
+.left {
+  @include flexColumn(space-between, center);
+  height: calc(100vh - 160px);
+  background-color: $bg-color-secondary;
+  flex: 0.1;
+  padding: 30px;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  margin: 20px;
+  border-radius: 10px;
+  h2 {
+    color: $btn-color-primary;
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
+  &__img {
+    width: 200px;
+    height: 200px;
+    background-color: $bg-color-primary;
+    border-radius: 50%;
+    border: 1px solid $btn-color-primary;
+    transition: $transition;
+    &:hover {
+      transform: translateY(-20px);
+      box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+      border: none;
+    }
+  }
+  p {
+    text-align: center;
+  }
+  .socialicons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    gap: 10px;
+    border-bottom: 1px solid $btn-color-primary;
+    &__children {
+      color: $btn-color-primary;
+      transition: $transition;
+      &:hover {
+        scale: $scale;
+        color: $btn-color-secondary;
+      }
+    }
+  }
+  button {
+    @extend %button-style-shared;
+    font-size: 17px;
+    font-weight: bold;
+    color: $btn-color-primary;
+    transition: $transition;
+    &:hover {
+      @include button-hover;
+    }
+  }
+}

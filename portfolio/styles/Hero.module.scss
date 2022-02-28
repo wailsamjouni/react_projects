@@ -87,13 +87,21 @@
       @extend %button-style-shared;
       @include border-left;
       margin-right: 10px;
-      background-color: $bg-color-primary;
+      transition: $transition;
       h4 {
         margin-left: 10px;
         color: $btn-color-primary;
       }
+      &:hover {
+        background-color: $btn-color-primary;
+        h4 {
+          color: $bg-color-secondary;
+        }
+        .hero__children {
+          color: $bg-color-secondary;
+        }
+      }
       @include responsive-mode(mobil) {
-        border-radius: 0;
         font-size: 14px;
       }
     }
@@ -101,15 +109,32 @@
       @extend %button-style-shared;
       @include border-right;
       margin-left: 10px;
-      background-color: $bg-color-primary;
+      transition: $transition;
+      &:hover {
+        background-color: $btn-color-primary;
+        h4 {
+          color: $bg-color-secondary;
+        }
+        .hero__children {
+          color: $bg-color-secondary;
+        }
+      }
+      &:hover {
+        background-color: $btn-color-primary;
+      }
       h4 {
         margin-left: 10px;
         color: $btn-color-primary;
+        // &:hover {
+        //   color: $bg-color-secondary;
+        // }
       }
       @include responsive-mode(mobil) {
-        border-radius: 0;
         font-size: 14px;
       }
     }
+  }
+  &__children {
+    color: orange;
   }
 }

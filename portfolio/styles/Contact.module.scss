@@ -12,6 +12,7 @@
     height: 75vh;
     width: 70%;
     padding: 40px;
+    gap: 60px;
     background-color: $bg-color-primary;
     .contact__left {
       @include flexColumn(space-between, center);
@@ -41,6 +42,9 @@
       @include responsive-mode(mobil) {
         display: none;
       }
+      @include responsive-mode(tab-port) {
+        display: none;
+      }
     }
     form {
       @include flexBox(center);
@@ -51,7 +55,7 @@
       border-radius: 20px;
       .contact__formcontainer {
         @include flexColumn(center, flex-start);
-        background-color: $bg-color-primary;
+        background-color: $bg-color-secondary;
         padding: 20px 40px;
         border-radius: 10px;
         box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
@@ -60,10 +64,17 @@
         input {
           @extend %input-style-shared;
           height: 60px;
+          @include responsive-mode(mobil) {
+            height: 40px;
+            font-size: 15px;
+          }
         }
         textarea {
           @extend %input-style-shared;
           resize: none;
+          @include responsive-mode(mobil) {
+            font-size: 15px;
+          }
         }
       }
       &::before {
@@ -80,6 +91,9 @@
         @include responsive-mode(mobil) {
           display: inline;
         }
+        @include responsive-mode(tab-port) {
+          display: inline;
+        }
       }
     }
     .contact__container {
@@ -89,10 +103,20 @@
       .contact__sendmessage {
         @include flexBox(center);
         width: 50%;
-        background-color: $bg-color-secondary;
+        background-color: $bg-color-primary;
         padding: 10px 20px;
         border-radius: 10px;
+        transition: $transition;
         color: $btn-color-primary;
+        &:hover {
+          background-color: $btn-color-primary;
+          .contact__children {
+            color: $bg-color-secondary;
+          }
+          h3 {
+            color: $bg-color-secondary;
+          }
+        }
         h3 {
           margin-left: 10px;
           font-size: 20px;
@@ -100,10 +124,10 @@
             font-size: 14px;
           }
         }
-        @include responsive-mode(mobil) {
-          // background-color: $bg-color-secondary;
-        }
       }
     }
+  }
+  &__children {
+    color: $btn-color-primary;
   }
 }

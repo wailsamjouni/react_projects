@@ -30,13 +30,13 @@ function Hero() {
           <div className={styles.hero__bottom}>
             <Link href='/portfolio'>
               <div className={styles.hero__viewportfolio}>
-                <BsFillArrowRightSquareFill size={'1.7rem'} color='orange'/>
+                <BsFillArrowRightSquareFill size={'1.7rem'} className={styles.hero__children}/>
                 <h4 className={styles.hero__portfoliotext}>Portfolio</h4>
               </div>
             </Link>
             <Link href='/resume'>
               <div className={styles.hero__viewresume}>
-                <IoDocumentText size={'1.7rem'} color='orange'/>
+                <IoDocumentText size={'1.7rem'} className={styles.hero__children}/>
                 <h4 className={styles.hero__resumetext}>Resume</h4>
               </div>
             </Link>

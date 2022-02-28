@@ -1,0 +1,27 @@
+@import "../partials/extend";
+@import "../partials/media";
+@import "../partials/mixins";
+@import "../partials/variables";
+
+.infos {
+  @include flexColumn(space-between, flex-start);
+  padding: 20px;
+  background-color: $bg-color-primary;
+  border-radius: 10px;
+  gap: 10px;
+  &__children {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    h4 {
+      color: $btn-color-secondary;
+      font-size: 14px;
+      transition: $transition;
+      cursor: pointer;
+      &:hover {
+        color: $btn-color-primary;
+      }
+    }
+  }
+}

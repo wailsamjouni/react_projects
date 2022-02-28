@@ -27,7 +27,7 @@ function Contact() {
               </textarea>
             <div className={styles.contact__container}>
               <div className={styles.contact__sendmessage}>
-                <FiSend size={'1.7rem'} color='orange'/>
+                <FiSend size={'1.7rem'} className={styles.contact__children}/>
                 <h3 className={styles.contact__sendtitle}>Send</h3>
               </div>
             </div>

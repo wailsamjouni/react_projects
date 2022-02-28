@@ -32,3 +32,8 @@
     0% 75%
   );
 }
+
+@mixin button-hover {
+  color: $bg-color-secondary;
+  background-color: $btn-color-primary;
+}

@@ -7,13 +7,16 @@
   padding: 10px 20px;
   margin-bottom: 10px;
   cursor: pointer;
+  border-radius: 10px;
+  border: none;
+  background-color: $bg-color-primary;
 }
 
 %input-style-shared {
   border: none;
   outline: none;
   padding: 10px;
-  background-color: $bg-color-secondary;
+  background-color: $bg-color-primary;
   font-size: 18px;
   width: 95%;
   color: $btn-color-secondary;
