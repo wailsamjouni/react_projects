@@ -4,9 +4,9 @@
 @import "../partials/variables";
 
 .container {
+  width: 100%;
   @include flexColumn(center, flex-start);
   padding: 10px;
-  width: 100%;
   &__wrapper {
     @include flexBox(center);
     margin-bottom: 10px;
@@ -17,11 +17,20 @@
       @include span-resume;
     }
   }
-  &__educations {
-    display: flex;
+  &__skills {
+    // @include flexBox(center);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     width: 100%;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 20px;
+    background-color: $bg-color-primary;
+    .container__skill {
+      background-color: #21232a;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 10px;
+      margin: 10px;
+    }
   }
 }

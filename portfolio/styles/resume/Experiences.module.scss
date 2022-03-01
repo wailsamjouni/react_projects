@@ -16,4 +16,8 @@
       @include span-resume;
     }
   }
+  &__experiences {
+    display: flex;
+    justify-content: space-between;
+  }
 }

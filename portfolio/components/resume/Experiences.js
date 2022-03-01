@@ -10,20 +10,22 @@ function Experiences() {
             <span></span>
             <h1>work experiences</h1>
         </div>
-        {
-            experienceData.map(experience => {
-                return(
-                    <Experience 
-                        key={experience.id}
-                        job={experience.job}
-                        company={experience.company}
-                        period={experience.period}
-                        place={experience.place}
-                        todo={experience.todo}
-                    />
-                );
-            })
-        }
+        <div className={styles.container__experiences}>
+            {
+                experienceData.map(experience => {
+                    return(
+                        <Experience 
+                            key={experience.id}
+                            job={experience.job}
+                            company={experience.company}
+                            period={experience.period}
+                            place={experience.place}
+                            todo={experience.todo}
+                        />
+                    );
+                })
+            }
+        </div>
     </div>
   )
 }
