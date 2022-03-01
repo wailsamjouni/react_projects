@@ -9,21 +9,17 @@
   justify-content: center;
   align-items: flex-start;
   border-bottom: 1px solid $btn-color-primary;
-  padding: 20px;
+  padding: 10px;
   &__wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 10px;
-    // padding: 10px;
     h1 {
-      font-size: 30px;
-      padding: 10px;
+      @include title-resume;
     }
     span {
-      height: 30px;
-      width: 4px;
-      background-color: orange;
+      @include span-resume;
     }
   }
   &__educations {

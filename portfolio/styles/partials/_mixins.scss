@@ -37,3 +37,16 @@
   color: $bg-color-secondary;
   background-color: $btn-color-primary;
 }
+
+@mixin title-resume {
+  font-size: 20px;
+  padding: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+@mixin span-resume {
+  height: 30px;
+  width: 4px;
+  background-color: orange;
+}

@@ -1,0 +1,19 @@
+@import "../partials/extend";
+@import "../partials/media";
+@import "../partials/mixins";
+@import "../partials/variables";
+
+.container {
+  @include flexColumn(center, flex-start);
+  padding: 10px;
+  &__wrapper {
+    @include flexBox(center);
+    margin-bottom: 10px;
+    h1 {
+      @include title-resume;
+    }
+    span {
+      @include span-resume;
+    }
+  }
+}
