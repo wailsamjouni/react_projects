@@ -19,5 +19,13 @@
   &__experiences {
     display: flex;
     justify-content: space-between;
+    @include responsive-mode(mobil) {
+      @include flexColumn(center, center);
+      gap: 40px;
+    }
+  }
+  @include responsive-mode(mobil) {
+    @include flexColumn(flex-start, center);
+    gap: 20px;
   }
 }

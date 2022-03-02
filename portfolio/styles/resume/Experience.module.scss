@@ -9,18 +9,38 @@
   margin: 10px;
   padding: 10px;
   gap: 10px;
+  position: relative;
   h2 {
     font-weight: normal;
+    @include responsive-mode(mobil) {
+      font-size: 18px;
+      position: absolute;
+      background-color: orange;
+      padding: 5px 15px;
+      top: -30px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: $bg-color-primary;
+      border-bottom: 1px solid $btn-color-primary;
+    }
   }
   h3 {
     color: $btn-color-primary;
     font-size: 17px;
+    @include responsive-mode(mobil) {
+      font-size: 18px;
+    }
   }
   &__period {
     width: 100%;
     display: flex;
     justify-content: space-around;
     align-items: flex-start;
+    h5:nth-child(2) {
+      @include responsive-mode(mobil) {
+        display: none;
+      }
+    }
   }
   &__todo {
     display: flex;
@@ -32,5 +52,9 @@
       font-size: 14px;
       list-style-type: square;
     }
+  }
+  @include responsive-mode(mobil) {
+    @include flexColumn(flex-start, flex-start);
+    width: 100%;
   }
 }

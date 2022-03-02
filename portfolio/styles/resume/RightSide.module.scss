@@ -24,6 +24,9 @@
       align-items: flex-start;
       flex: 0.8;
     }
+    @include responsive-mode(mobil) {
+      @include flexColumn(center, center);
+    }
   }
   &__projects {
     display: flex;

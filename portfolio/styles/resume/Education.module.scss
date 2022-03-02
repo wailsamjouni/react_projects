@@ -4,16 +4,15 @@
 @import "../partials/variables";
 
 .container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  @include flexColumn(center, center);
   gap: 10px;
   background-color: $bg-color-primary;
   padding: 10px;
   h2 {
     color: $btn-color-primary;
-    font-weight: normal;
+    @include responsive-mode(mobil) {
+      font-size: 18px;
+    }
   }
   h3 {
     font-size: 15px;
@@ -28,5 +27,13 @@
     span {
       color: $btn-color-primary;
     }
+  }
+  @include responsive-mode(mobil) {
+    @include flexColumn(center, center);
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    gap: 15px;
+    width: 100%;
   }
 }

@@ -7,4 +7,9 @@
   display: flex;
   background-color: $bg-color-primary;
   color: $btn-color-secondary;
+  justify-content: center;
+  align-items: flex-start;
+  @include responsive-mode(mobil) {
+    @include flexColumn(flex-start, center);
+  }
 }

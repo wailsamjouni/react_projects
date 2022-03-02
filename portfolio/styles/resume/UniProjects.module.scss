@@ -1,0 +1,40 @@
+@import "../partials/extend";
+@import "../partials/media";
+@import "../partials/mixins";
+@import "../partials/variables";
+
+.container {
+  @include flexColumn(flex-end, flex-start);
+  padding: 10px;
+  &__wrapper {
+    @include flexBox(center);
+    margin-bottom: 10px;
+    h1 {
+      @include title-resume;
+    }
+    span {
+      @include span-resume;
+    }
+  }
+  &__projects {
+    @include flexColumn(flex-start, flex-start);
+    gap: 10px;
+    .project {
+      @include flexColumn(flex-start, flex-start);
+      background-color: $bg-color-primary;
+      padding: 10px;
+      gap: 20px;
+      h2 {
+        color: $btn-color-primary;
+        font-size: 20px;
+      }
+      p {
+        letter-spacing: 1px;
+        span {
+          color: $btn-color-primary;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+}
