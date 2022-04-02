@@ -1,0 +1,98 @@
+@import '../styles/mixins';
+@import '../styles/variables';
+nav {
+    @include flex(center, center);
+    .container {
+        @include flex(space-between, center);
+        width: 100%;
+        height: 80px;
+        background-color: $primary-color;
+        position: sticky;
+        z-index: 2;
+        top: 0;
+        padding: 15px 30px;
+        &__logo {
+            @include flex(center, center);
+            flex: 2;
+            color: $icons-color;
+            cursor: pointer;
+            font-size: 40px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            background-color: #282C34;
+            border-radius: 20px;
+        }
+        &__midlle {
+            @include flex(center, center);
+            flex: 4;
+            padding: 5px 10px;
+            .search {
+                @include flex(center, center);
+                gap: 10px;
+                width: 70%;
+                padding: 10px;
+                background-color: $icons-color;
+                border-radius: 20px;
+                input {
+                    outline: none;
+                    border: none;
+                    padding: 5px 10px;
+                    border-radius: 20px;
+                    background-color: transparent;
+                    font-size: 20px;
+                     ::placeholder {
+                        color: black;
+                    }
+                }
+                .searchicon {
+                    color: #495057;
+                }
+            }
+        }
+        &__right {
+            color: $icons-color;
+            flex: 4;
+            @include flex(space-between, center);
+            .links {
+                @include flex(center, center);
+                gap: 15px;
+                cursor: pointer;
+                color: $icons-color;
+                font-size: 20px;
+            }
+            .iconscontainer {
+                display: flex;
+                justify-content: space-evenly;
+                width: 40%;
+                .icons {
+                    cursor: pointer;
+                    position: relative;
+                    color: black;
+                    span {
+                        @include flex(center, center);
+                        padding: 10px;
+                        width: 15px;
+                        height: 15px;
+                        background-color: #f94144;
+                        border-radius: 50%;
+                        position: absolute;
+                        top: -15px;
+                        right: -10px;
+                        font-weight: 500;
+                    }
+                }
+            }
+        }
+        img {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            object-fit: cover;
+            cursor: pointer;
+        }
+    }
+    .icon {
+        color: $icons-color;
+        cursor: pointer;
+    }
+}
