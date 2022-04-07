@@ -1,0 +1,30 @@
+.search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 40px;
+}
+
+.search__wrapper {
+    background-color: #ced4da;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.search__title {
+    font-size: 30px;
+    color: #495057;
+    margin-bottom: 10px;
+}
+
+.search__input {
+    width: 100%;
+    border: none;
+    outline: none;
+    background-color: #adb5bd;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+}
