@@ -14,7 +14,7 @@ function Home() {
         async function fetchMyAPI() {
             let response = await fetch(`${url}${searchTerm}`)
             response = await response.json()
-            console.log(response.drinks)
+            // console.log(response.drinks)
             if (response.drinks) {
                 setCocktailDB(response.drinks)
             }

@@ -14,9 +14,10 @@ function Cocktail({ idDrink, strDrink, strCategory, strDrinkThumb, strAlcoholic,
                     <h4 className="cocktail__glass">Glass: {strGlass}</h4>
                     <h4 className="cocktail__glass1">Category: {strCategory}</h4>
                     <h5 className="cocktail__alcoholic">{strAlcoholic}</h5>
-                    <h3 className="cocktail__details">Details</h3>
+                    <Link to={`/cocktail/${idDrink}`}>
+                        <h3 className="cocktail__details">Details</h3>
+                    </Link>
                 </div>
-                <Link to={`/cocktail/${idDrink}`}></Link>
             </div>
         </article>
     )
