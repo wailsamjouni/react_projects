@@ -3,7 +3,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 20px 50px;
+    padding: 20px 100px;
     gap: 30px;
     height: calc(100vh - 80px);
 }
@@ -57,6 +57,8 @@
     margin: 10px;
     font-size: 18px;
     font-weight: 600;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 .special__label {
@@ -84,4 +86,8 @@
 
 .button:hover {
     background-color: #ced4da;
+}
+
+.ingredient {
+    padding: 0 5px;
 }

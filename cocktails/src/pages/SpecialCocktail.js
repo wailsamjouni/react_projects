@@ -111,7 +111,7 @@ function SpecialCocktail() {
                     <p className='special__name'>
                         <span className='special__label'>Ingredients </span>
                         {cocktailIngredients.map((ingredient, index) => {
-                            return ingredient && <span key={index} className='special__ ingredient'> {ingredient}</span>
+                            return ingredient && <span key={index} className='special__ ingredient'>  {ingredient}</span>
                         })}
                     </p>
                 </div>

@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react'
 import CocktailList from '../components/CocktailList'
 import Search from '../components/Search'
+import './Home.css'
 
 function Home() {
 
@@ -25,7 +26,7 @@ function Home() {
         }
         const timer = setTimeout(() => {
             fetchMyAPI();
-        }, 500)
+        }, 100)
 
         return () => {
             clearTimeout(timer);
@@ -36,7 +37,7 @@ function Home() {
 
 
     return (
-        <main>
+        <main className='home'>
             <Search setSearchTerm={setSearchTerm} />
             <CocktailList cocktailDB={cocktailDB} loading={loading} searchTerm={searchTerm} />
         </main>
